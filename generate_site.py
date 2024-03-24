@@ -33,14 +33,14 @@ def make_game_page(json_filename, json_path):
     html_file.write('<div id="div_goodies_links">')
     html_file.write('<h1>Goodies Download Links</h1>')
     for link in parsed_json["MSG"]["links"]["GOODIES"]:
-        html_file.write(f"<a href={link["links"][0]["link"]}>{link["name"]}</a><br>")
+        html_file.write(f"<a {link["links"][0]["link"]}>{link["name"]}</a><br>")
     
     html_file.write('</div>')
     
     html_file.write('<div id="div_patches_links">')
     html_file.write('<h1>Patch/Other Downloads</h1>')
     for link in parsed_json["MSG"]["links"]["PATCHES"]:
-        html_file.write(f"<a href={link["links"][0]["link"]}>{link["name"]}</a><br>")
+        html_file.write(f"<a {link["links"][0]["link"]}>{link["name"]}</a><br>")
         html_file.write('<div id="div_game">')
     html_file.write('</div>')
 
@@ -54,7 +54,7 @@ def make_game_page(json_filename, json_path):
         html_file.write('<div id="div_goodies">')
         html_file.write('<h1>Goodies Included</h1>')
         for name in parsed_json["MSG"]["files"]["GOODIES"]:
-            html_file.write(f"<p>href={name["name"]}</p><br>")
+            html_file.write(f"<p>{name["name"]}</p><br>")
 
         html_file.write('</div>')
 
