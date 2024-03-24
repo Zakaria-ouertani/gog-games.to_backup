@@ -11,3 +11,8 @@ Except the href, which is the link to the game resource.
 ```text
 https://gog-games.to + href
 ```
+
+## Script usage
+```
+generate_site.py json_files_folder
+```
